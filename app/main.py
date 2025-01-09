@@ -36,8 +36,7 @@ def main(book: Book, commands: list[tuple[str, str]]) -> None | str:
     for cmd, method_type in commands:
         current_command = input_commands(cmd, method_type)
 
-        if current_command is not None:
-            return current_command(book).execute()
+        return current_command(book).execute()
 
 
 if __name__ == "__main__":
